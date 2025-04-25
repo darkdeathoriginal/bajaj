@@ -82,7 +82,7 @@ export default function SearchBar({ value, onChange, suggestions, onSuggestionCl
       {showSuggestions && suggestions.length > 0 && (
         <ul
           ref={suggestionsRef}
-          className="absolute z-20 mt-1 w-full bg-white dark:bg-gray-800 shadow-xl rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden divide-y divide-gray-100 dark:divide-gray-700" 
+          className="absolute z-20 mt-1 w-full bg-white  shadow-xl rounded-lg border border-gray-200  overflow-hidden divide-y divide-gray-100 " 
         >
           {suggestions.map((doctor) => (
             <li
@@ -94,10 +94,10 @@ export default function SearchBar({ value, onChange, suggestions, onSuggestionCl
               
               onMouseDown={(e) => e.preventDefault()}
               
-              className="flex items-center px-4 py-3 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-150 ease-in-out"
+              className="flex items-center px-4 py-3 cursor-pointer hover:bg-gray-100 :bg-gray-700 transition-colors duration-150 ease-in-out"
             >
               
-              <div className="flex-shrink-0 mr-3 h-10 w-10 relative rounded-md overflow-hidden bg-gray-200 dark:bg-gray-600"> 
+              <div className="flex-shrink-0 mr-3 h-10 w-10 relative rounded-md overflow-hidden bg-gray-200 "> 
                 <Image
                   
                   src={!doctor.photo || doctor.photo === "null" ? "/default-profile.png" : doctor.photo}
@@ -110,12 +110,12 @@ export default function SearchBar({ value, onChange, suggestions, onSuggestionCl
 
               
               <div className="flex-grow min-w-0"> 
-                <p className="text-sm font-medium text-gray-900 dark:text-white truncate"> 
+                <p className="text-sm font-medium text-gray-900  truncate"> 
                   {doctor.name || 'Doctor Name'}
                 </p>
                 
                 {doctor.specialities && doctor.specialities.length > 0 && (
-                  <p className="text-xs text-gray-500 dark:text-gray-400 uppercase truncate"> 
+                  <p className="text-xs text-gray-500  uppercase truncate"> 
                     {doctor.specialities.map(e => e?.name).filter(Boolean).join(', ') || 'Specialty not available'}
                   </p>
                 )}
