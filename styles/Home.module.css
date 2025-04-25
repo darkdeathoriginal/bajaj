@@ -1,0 +1,212 @@
+/* styles/Home.module.css */
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+  }
+  
+  .headerContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .header h1 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 24px;
+  }
+  
+  .searchContainer {
+    position: relative;
+    max-width: 600px;
+  }
+  
+  .autocompleteWrapper {
+    position: relative;
+  }
+  
+  .autocompleteWrapper input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  .autocompleteWrapper input:focus {
+    border-color: #0070e0;
+  }
+  
+  .suggestionsList {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    z-index: 10;
+    list-style: none;
+    max-height: 200px;
+    overflow-y: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    margin: 0;
+  }
+  
+  .suggestionsList li {
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .suggestionsList li:hover {
+    background-color: #f0f8ff;
+  }
+  
+  .main {
+    flex: 1;
+    padding: 30px 0;
+    background-color: #f5f5f5;
+  }
+  
+  .contentContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .content {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .filters {
+    flex: 0 0 280px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    align-self: flex-start;
+  }
+  
+  .filterSection {
+    margin-bottom: 25px;
+  }
+  
+  .filterSection h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #eee;
+    color: #444;
+  }
+  
+  .filterOptions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .filterOptions label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .filterOptions input[type="checkbox"],
+  .filterOptions input[type="radio"] {
+    margin-right: 10px;
+  }
+  
+  .results {
+    flex: 1;
+  }
+  
+  .results h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #333;
+  }
+  
+  .doctorList {
+    display: grid;
+    gap: 20px;
+  }
+  
+  .doctorCard {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .doctorCard:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .doctorInfo h3 {
+    color: #0070e0;
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  
+  .doctorInfo p {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .consultationType {
+    margin-top: 15px;
+  }
+  
+  .consultationType span {
+    display: inline-block;
+    background-color: #e6f7ff;
+    color: #0070e0;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  
+  .loading, .error {
+    text-align: center;
+    padding: 50px 0;
+    font-size: 18px;
+  }
+  
+  .error {
+    color: #d32f2f;
+  }
+  
+  .noResults {
+    text-align: center;
+    padding: 40px 0;
+    color: #666;
+    font-size: 16px;
+  }
+  
+  @media (max-width: 900px) {
+    .content {
+      flex-direction: column;
+    }
+    
+    .filters {
+      flex: none;
+      width: 100%;
+    }
+  }
